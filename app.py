@@ -21,8 +21,6 @@ def cari():
 
     if nama:
         hasil = df[df['Nama Senyawa'].str.contains(nama, case=False, na=False)]
-    elif cas:
-        hasil = df[df['CAS Number'].astype(str).str.contains(cas, case=False, na=False)]
     else:
         return jsonify({"error": "Berikan parameter ?nama= atau ?cas="})
 
